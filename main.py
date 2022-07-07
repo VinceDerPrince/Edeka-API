@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-import scraper as _scraper
+import src.scraper as _scraper
 
 app = FastAPI()
 
