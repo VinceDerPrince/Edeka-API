@@ -8,5 +8,5 @@ async def route():
     return {"message":"Willkommen zu dieser Edeka Angebote API"}
 
 @app.get("/get_offers")
-async def get_offers():
-    return _scraper.get_offers()
+async def get_offers(adress: str):
+    return _scraper.get_offers(adress)
