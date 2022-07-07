@@ -48,8 +48,10 @@ def get_offers(adress: str) -> Dict:
                 "name": offer["title"],
                 "id": offer["id"],
                 "price": offer["price"]["value"],
+                #"pastPrice": offer["lowestPrice"],
                 "discount": offer["discountInPercentage"],
                 "description": offer["descriptionApp"],
+                "image": offer["images"]["original"],
                 #"category": offer["category"]["name"],
                 "validTill": offer["validTill"]
             }
@@ -59,5 +61,3 @@ def get_offers(adress: str) -> Dict:
         complete[i] = query
         i += 1
     return complete
-
-print(get_offers("Eppendorfer Baum"))
