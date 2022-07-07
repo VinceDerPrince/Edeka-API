@@ -24,8 +24,10 @@ def get_offers() -> Dict:
     data = r.json()
     
     offers = dict()
+    n = 1
     for offer in data["offers"]:
-        offers[offer['title']] = {
+        offers[n] = {
+            "name": offer["title"],
             "id": offer["id"],
             "price": offer["price"]["value"],
             "discount": offer["discountInPercentage"],
@@ -33,6 +35,7 @@ def get_offers() -> Dict:
             "category": offer["category"]["name"],
             "validTill": offer["validTill"]
         }
+        n += 1
     
     return offers
 
