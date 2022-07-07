@@ -26,3 +26,4 @@ Nun sollte es wie folgt in ihrem Terminal aussehen und ein Tab sollte sich mit d
 
 ## Need To Know
 Diese API wurde aus spaß und als Übung erstellt, es soll in keinem Wege irgendjemanden verletzen. Sollte dies der Fall sein kontaktieren Sie mich. 
+Die API auf [RapidAPI](rapidapi.com) hat eine Schlafenszeit um 0:00 GMT. 
