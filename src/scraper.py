@@ -4,7 +4,9 @@ import requests as _requests
 url = "https://www.edeka.de/api/offers"
 
 def _generate_url(address: str) -> str:
-
+    '''
+    Returns the markets found by the searchTerm aka the adress, it gives the name and id
+    '''
     url = "https://www.edeka.de/api/marketsearch/markets"
 
     querystring = {"limit":"999","searchstring":address}
@@ -15,6 +17,9 @@ def _generate_url(address: str) -> str:
     return json["markets"]
 
 def get_offers(adress: str) -> Dict:
+    '''
+    Returns every single offer associated with the two markets
+    '''
     markets = _generate_url(adress)
     complete = dict()
     i = 1
